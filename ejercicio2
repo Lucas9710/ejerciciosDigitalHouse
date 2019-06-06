@@ -1,0 +1,29 @@
+<script>
+function masMenos(array){
+  var array = [1, 2, 0, -1];
+  var miArray= [];
+  var posicion0 = array[0];
+  var posicion1 = array[1];
+  var posicion2 = array [2];
+  var posicion3 = array [3];
+  posicion0.toString();
+  posicion1.toString();
+  posicion2.toString();
+  posicion3.toString();
+  
+ var posiciones = posicion0 + posicion1 + posicion2 + posicion3 ;
+
+
+var  cantDeElementosDelArray = array.length ;
+  for(i= 0; i < cantDeElementosDelArray; i++){
+     if (posicion0 >0 || posicion1 >0 || posicion2 > 0 || posicion3 > 0  ){
+ 
+       
+     }else if(array[i] == 0){
+		miArray.push(i);     
+     }else if(array[i]<0){
+       miArray.push(i);
+     }
+ }
+ alert(posiciones);
+  
