@@ -1,0 +1,71 @@
+function seAbre(ingresosDelLunes, cantMinima){
+
+  var alumnosQueLlegaronBien= 0;  
+
+
+	for(var i =0; i < ingresosDelLunes.length; i++){
+		   if(ingresosDelLunes[i] <= 0){
+     		alumnosQueLlegaronBien ++; 
+   			}
+  }
+   	if(alumnosQueLlegaronBien >= cantMinima){
+    				return true;
+    	 }else{
+       			return false;
+     	 }
+  
+}
+
+
+function aperturas(ingresosDelLunes, ingresosDelMartes, ingresosDelMiercoles, cantMinima){
+ 
+
+   var  alumnosQueLlegaronBienLunes = 0;  
+   var  alumnosQueLlegaronBienMartes = 0;  
+   var  alumnosQueLlegaronBienMiercoles = 0;  
+   var arreglo = [];
+  var largoLunes = ingresosDelLunes.length;
+  var largoMartes = ingresosDelMartes.length;
+  var largoMiercoles = ingresosDelMiercoles.length;
+   // dia lunes
+     for(var i =0; i < largoLunes; i++){
+         
+       if(ingresosDelLunes[i] <= 0){
+       
+       alumnosQueLlegaronBienLunes ++; 
+        }
+     }
+  if(alumnosQueLlegaronBienLunes >= cantMinima){
+            arreglo.push(true);
+       }else{
+            arreglo.push(false);
+       }
+    
+    
+    //dia martes
+    for(var i =0; i <  largoMartes; i++){
+       if( ingresosDelMartes[i] <= 0){
+        alumnosQueLlegaronBienMartes ++; 
+        }
+     }
+  if(alumnosQueLlegaronBienMartes >= cantMinima){
+            arreglo.push(true);
+       }else{
+            arreglo.push(false);
+       }
+        
+        
+  //dia miercoles
+     for(var i =0; i < largoMiercoles; i++){
+       if( ingresosDelMiercoles[i] <= 0){
+        alumnosQueLlegaronBienMiercoles ++; 
+        }
+     }
+  if(alumnosQueLlegaronBienMiercoles >= cantMinima){
+            arreglo.push(true);
+       }else{
+            arreglo.push(false);
+       }
+ return arreglo;
+}
+
